@@ -298,7 +298,7 @@ div[class*="listItem"]:has(div[aria-label="Download Apps"]),
 
 #channel-attach-SLASH_COMMAND,
 /* Removes Chatbox from channel that don't allow you to communicate */
-.channelTextAreaDisabled_d0696b,
+.channelTextAreaDisabled_bdf0de,
 /* Removes Follow banner on bottom of channels */
 .wrapper_faf5ab {
   display: none;
@@ -524,4 +524,11 @@ span[class^="botTag"]::after {
 #user-context-add-friend-nickname,
 #user-context-apps {
   display: none;
+}
+
+/* vc opacity for darkmode */
+.overlayContainer_ba4b17 {
+background-color: black;
+opacity: .5 ;
+margin: 0;
 }
