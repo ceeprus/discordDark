@@ -218,7 +218,7 @@ div[class*="listItem"]:has(div[aria-label="Download Apps"]),
 }
 
 /* Discover */
-.footer_f8ec41, [aria-label*="Discover"] {
+.footer_d71945, [aria-label*="Discover"] {
   display: none;
 }
 [class^="userPopoutInner_"] [class^="blockquoteContainer_"] {
@@ -523,4 +523,11 @@ span[class^="botTag"]::after {
 #user-context-add-friend-nickname,
 #user-context-apps {
   display: none;
+}
+
+/* vc opacity for darkmode */
+/* .overlayContainer_ba4b17 {
+background-color: black;
+opacity: .5 ;
+margin: 0;
 }
