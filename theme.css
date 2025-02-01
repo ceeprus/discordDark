@@ -64,22 +64,22 @@
                     ▀                  █ ▀    █      */
 
 /* Shiggy loader */
-.container_e40c16.fixClipping_c7e9c6 > .content_e40c16 {
+.container_a2f514.fixClipping_efbae7 > .content_a2f514 {
   position: relative;
 }
 
-.container_e40c16.fixClipping_c7e9c6 > .content_e40c16 .ready_e40c16 {
+.container_a2f514.fixClipping_efbae7 > .content_a2f514 .ready_a2f514 {
   display: none;
 }
 
-.container_e40c16.fixClipping_c7e9c6
-  > .content_e40c16
-  .ready_e40c16
-  + .text_e40c16 {
+.container_a2f514.fixClipping_efbae7
+  > .content_a2f514
+  .ready_a2f514
+  + .text_a2f514 {
   top: 50px;
 }
 
-.container_e40c16.fixClipping_c7e9c6 > .content_e40c16::before {
+.container_a2f514.fixClipping_efbae7 > .content_a2f514::before {
   content: "";
   position: absolute;
   bottom: 10px;
@@ -112,21 +112,21 @@
 }
 
 /* replace ping/strikethrough red */
-.numberBadge_df8943,
+.numberBadge__2b1f5,
 /* dm unread number */
-.mention_edf32f
+.mention__3b95d
 
 /* "NEW" serverlist indicator */ {
   background: var(--accent-2) !important;
 }
 
 /* unread dividers */
-.divider_c2654d {
+.divider__908e2 {
   --divider-color: var(--accent-2);
 }
 
 /* mute button strikethrough */
-.icon_d80634 {
+.icon__07f91 {
   color: var(--accent-2) !important;
 }
 
@@ -158,7 +158,7 @@ path[fill="var(--status-danger)"]
 }
 
 /* settings checkbuttons */
-.container_cebd1c.checked_cebd1c {
+.container__87bf1.checked__87bf1 {
   background: var(--accent-3) !important;
 }
 
@@ -169,7 +169,7 @@ path[fill="var(--status-danger)"]
 }
 
 /* mention message left edge */
-.mentioned_d5deea:before {
+.mentioned__5126c:before {
   background: var(--accent-3) !important;
 }
 
@@ -208,17 +208,17 @@ path[fill="var(--status-danger)"]
 }
 
 /* kick ban timeout  ^^^ */
-.colorDanger_d90b3d {
+.colorDanger_c1e9c4 {
   color: var(--accent-2);
 }
 
 div[class*="listItem"]:has(div[aria-label="Download Apps"]),
-.guildSeparator_d0c57e {
+.guildSeparator__252b6 {
   display: none;
 }
 
 /* Discover */
-.footer_d71945, [aria-label*="Discover"] {
+.footer__214dc, [aria-label*="Discover"] {
   display: none;
 }
 [class^="userPopoutInner_"] [class^="blockquoteContainer_"] {
@@ -226,7 +226,7 @@ div[class*="listItem"]:has(div[aria-label="Download Apps"]),
 }
 
 /* hammin */
-[class^="panels_a4d4d9"]::before {
+[class^="panels_c48ade"]::before {
   content: "";
   width: 34px;
   height: 34px;
@@ -237,22 +237,22 @@ div[class*="listItem"]:has(div[aria-label="Download Apps"]),
 }
 
 /* Rounded Context Menu */
-.menu_d90b3d,
-.colorDefault_d90b3d {
+.menu_c1e9c4,
+.colorDefault_c1e9c4 {
   border-radius: 15px;
 }
 
 /* edited text */
-.timestamp_f9f2ca:not(.timestampInline_f9f2ca) time::after {
+.timestamp_c19a55:not(.timestampInline_c19a55) time::after {
   content: " (" attr(aria-label) ")";
 }
 
-.edited_f9f2ca:not(.message-translate-indicator) {
+.edited_c19a55:not(.message-translate-indicator) {
   display: none;
 }
 
 /* Fav gif icon */
-.imageAccessory_d4597d {
+.imageAccessory_af017a {
   left: unset;
   right: 6px;
 }
@@ -297,9 +297,9 @@ div[class*="listItem"]:has(div[aria-label="Download Apps"]),
 
 #channel-attach-SLASH_COMMAND,
 /* Removes Chatbox from channel that don't allow you to communicate */
-.channelTextAreaDisabled_bdf0de,
+.channelTextAreaDisabled__74017,
 /* Removes Follow banner on bottom of channels */
-.wrapper_faf5ab {
+.wrapper__44df5 {
   display: none;
 }
 
@@ -318,14 +318,14 @@ div[class*="listItem"]:has(div[aria-label="Download Apps"]),
 }
 
 /* show the url masked links take you to in the message */
-.anchor_af404b[title$=")"]::after {
+.anchor_edefb8[title$=")"]::after {
   font-size: 0.7rem;
   content: " (" attr(href) ")";
   filter: grayscale(0.4);
 }
 
 /* Make jump to present/jump to original/mark as read bars smaller and hug the right */
-.barBase_cf58b5 {
+.barBase__0f481 {
   width: fit-content;
   margin-left: auto;
 }
@@ -337,7 +337,7 @@ div[class*="listItem"]:has(div[aria-label="Download Apps"]),
 }
 
 /* set channel status */
-.linkBottom_d8bfb3 {
+.linkBottom__2ea32 {
   display: none;
 }
 
@@ -347,22 +347,22 @@ div[class*="listItem"]:has(div[aria-label="Download Apps"]),
 }
 
 /* Hide show all voice channels button */
-.voiceChannelsButton_a08117 {
+.voiceChannelsButton__29444 {
   display: none;
 }
 
 /* channels and roles tab */
-.container_f1fd9c,
-.header_f1fd9c,
+.container__0b563,
+.header__0b563,
 .scrollerContainer_c6b11b .container_c2efea,
 .theme-dark .scrollerContainer_c6b11b,
-.theme-dark .emptyPage_c6b11b,
+.theme-dark .emptyPage__5d7c9,
 .theme-dark .container_c2efea {
   background-color: var(--home-background) !important;
 }
 
 /* remove the funny little gradient on ^ */
-.theme-dark .innerHeader_f1fd9c:after {
+.theme-dark .innerHeader__0b563:after {
   display: none;
 }
 
@@ -447,7 +447,7 @@ div[class*="listItem"]:has(div[aria-label="Download Apps"]),
 }
 
 /*discord loading page*/
-.container_e40c16.fixClipping_c7e9c6 {
+.container_a2f514.fixClipping_efbae7 {
   background: 0 0;
   backdrop-filter: blur(5px);
 }
@@ -480,18 +480,18 @@ span[class^="botTag"]::after {
 }
 
 /* Custom Emoji Button */
-.sprite_d91a75.spriteColored_d91a75 {
+.sprite__04eed.spriteColored__04eed {
   background-image: url(https://cdn.discordapp.com/emojis/1024751291504791654.gif?size=128&quality=lossless);
   background-size: 24px;
 }
 
-.sprite_d91a75.spriteGreyscale_d91a75 {
+.sprite__04eed.spriteGreyscale__04eed {
   mask-image: url(https://cdn.discordapp.com/emojis/1024751291504791654.png?size=128&quality=lossless);
   mask-size: 24px;
 }
 
 /* context menu hover color */
-.colorDefault_d90b3d.focused_d90b3d {
+.colorDefault_c1e9c4.focused_c1e9c4 {
   background-color: var(--accent-5);
 }
 
@@ -512,7 +512,7 @@ span[class^="botTag"]::after {
 }
 
 /* no more ads in voice channels */
-.wrapper_b9619e {
+.wrapper_e9b191 {
   display: none;
 }
 
@@ -526,7 +526,7 @@ span[class^="botTag"]::after {
 }
 
 /* vc opacity for darkmode */
-/* .overlayContainer_ba4b17 {
+/* .overlayContainer__2f4f7 {
 background-color: black;
 opacity: .5 ;
 margin: 0;
