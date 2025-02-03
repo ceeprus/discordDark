@@ -257,6 +257,11 @@ div[class*="listItem"]:has(div[aria-label="Download Apps"]),
 .imageAccessory_af017a {
   left: unset;
   right: 6px;
+
+}
+/* Fav gif icon opacity*/
+.gifFavoriteButton_b7e1cb {
+background:rgba(0,0,0,0.5) ;
 }
 
 /* image maximized forward button */
