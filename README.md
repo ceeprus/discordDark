@@ -1,5 +1,7 @@
 <h2 align="center">Discord css file</h2>
 
+You have to enable Vencord plugin ThemeAttributes to use [SettingsIcons](https://minidiscordthemes.github.io/SettingsIcons/SettingsIcons.theme.css)
+
 Add this link on top of your customcss 
 
 ```
