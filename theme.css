@@ -1,4 +1,5 @@
-@import url(https://minidiscordthemes.github.io/SettingsIcons/SettingsIcons.theme.css);
+@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css");
+@import url("https://aushevahmad.github.io/awesome-css/modules/compressbotmsgs.css");
 
 :root {
   --theme-h: 0;
@@ -40,7 +41,7 @@
   --expression-picker-aspect-ratio: 1.125 / 1;
 }
 
-/*        ▄██████████████████████████████████████████ 
+/*        ▄██████████████████████████████████████████
         █████████████████████████████████████████████
        ██████████████████████████████████████████████
       ████████████████████▀██████████████████████████
@@ -228,12 +229,13 @@ div[class*="listItem"]:has(div[aria-label="Download Apps"]),
 /* hammin */
 [class^="panels_c48ade"]::before {
   content: "";
-  width: 34px;
-  height: 34px;
-  left: 200px;
-  margin-top: -36px;
+  width: 75px;
+  height: 80px;
+  left: 179px;
+  margin-top: -66px;
+  scale: 0.6;
   position: absolute;
-  background-image: url("https://cdn.discordapp.com/emojis/1055070511450828861.gif?size=96&quality=lossless");
+  background-image: url("https://cdn.discordapp.com/emojis/1335640482398732290.gif?size=96&quality=lossless");
 }
 
 /* Rounded Context Menu */
@@ -525,9 +527,61 @@ span[class^="botTag"]::after {
   display: none;
 }
 
-/* vc opacity for darkmode */
-/* .overlayContainer__2f4f7 {
-background-color: black;
-opacity: .5 ;
-margin: 0;
+/* channel list */  
+/* squish channel height/spacing */
+[class="link__2ea32"] {
+    padding-block: 3px;
+}
+
+/* shrink all channel icons */
+[class="iconContainer__2ea32"]>svg[role="img"] {
+    scale: 0.8;
+}
+
+/* squeeze channel list left */
+.wrapper__2ea32:not(.typeThread__2ea32) {
+    margin-left: 1 !important;
+}
+.wrapper__29444 {
+    padding-left: 8px !important;
+}
+
+/* fix threads "spine" */
+.spineBorder__5b40b {
+    bottom: 20px !important;
+    left: 16px;
+}
+.containerDefault_c69b6d>svg {
+    top: 5px;
+    left: 16px;
+}
+.wrapper__2ea32.typeThread__2ea32 {
+    margin-left: 28px;
+}
+
+/* make unread channel's icons brighter (because the unread indicator is now hidden)*/
+.modeUnreadImportant__2ea32 .icon__2ea32,
+.modeUnreadImportant__2ea32:hover .icon__2ea32,
+.modeSelected__2ea32:hover .icon__2ea32 {
+    color: var(--interactive-active);
+}
+
+/* dim all category labels */
+[class="mainContent__29444"] {
+    opacity: 70%;
+}
+
+/* hide category dropdown arrows, instead dim label when collapsed */
+[class="mainContent__29444"]>[class="icon__29444"] {
+    display: none;
+}
+[class="mainContent__29444"][aria-expanded="false"] {
+    opacity: 50% !important;
+}
+
+/* action buttons */
+.actionButtons_e131a9 {
+    scale: .9;
+    margin-bottom: -4px;
+    margin-top: -4px;
 }
