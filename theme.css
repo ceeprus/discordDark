@@ -476,15 +476,6 @@ background:rgba(0,0,0,0.5) ;
   height: 100%;
 }
 
-/* Change APP tag to BOT */
-span[class^="botTag"] > span[class^="botText"] {
-  display: none;
-}
-
-span[class^="botTag"]::after {
-  content: "BOT";
-}
-
 /* Custom Emoji Button */
 .sprite__04eed.spriteColored__04eed {
   background-image: url(https://cdn.discordapp.com/emojis/1024751291504791654.gif?size=128&quality=lossless);
