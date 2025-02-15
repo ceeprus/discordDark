@@ -281,7 +281,6 @@ background:rgba(0,0,0,0.5) ;
 #user-context-add-friend,
 #user-context-voice-move,
 #user-context-invite-to-listen,
-#message-forward,
 #guild-context-privacy {
   display: none;
 }
@@ -578,4 +577,44 @@ background:rgba(0,0,0,0.5) ;
     scale: .9;
     margin-bottom: -4px;
     margin-top: -4px;
+}
+
+/* colored role pills */
+.role_dfa8b6.pill_dfa8b6 {
+    position: relative;
+    background: none;
+    border: none;
+    padding-left: 28px;
+}
+.role_dfa8b6.pill_dfa8b6 > span {
+    z-index: 1;
+}
+.role_dfa8b6.pill_dfa8b6 .roleRemoveButton_dfa8b6 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0 !important;
+}
+.role_dfa8b6.pill_dfa8b6 .roleCircle__4f569 {
+    margin: 6px 8px;
+}
+.role_dfa8b6.pill_dfa8b6 .roleCircle__4f569::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: inherit;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border-radius: var(--radius-xs);
+    filter: brightness(1.1);
+    opacity: 0.25;
+}
+
+/* Remove seperator in report msg */
+div.separator_c1e9c4:nth-of-type(9) {
+display: none;
 }
