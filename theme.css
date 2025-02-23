@@ -269,7 +269,6 @@ background:rgba(0,0,0,0.5) ;
 }
 
 /* Message shift-hover */
-[aria-label*="Create Thread"],
 [aria-label*="Copy Message ID"] {
   display: none;
 }
