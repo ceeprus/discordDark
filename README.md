@@ -11,4 +11,4 @@ Add this link on top of your customcss
 - Dont use Betterdiscord!
 
 # Preview
-![1](https://github.com/user-attachments/assets/07ad5de3-0e66-4280-b0f0-0f4666e0c7f0)
+![1](https://github.com/user-attachments/assets/683ea764-4248-4d35-802d-106dd6fcb768)
