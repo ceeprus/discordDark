@@ -581,3 +581,90 @@ background:rgba(0,0,0,0.5) ;
 div.separator_c1e9c4:nth-of-type(9) {
 display: none;
 }
+
+/* DM call UI in VCs updated */
+.tile_d6271c {
+    width: 200px !important;
+
+    .tileSizer_d6271c {
+        aspect-ratio: 1 / 1;
+        width: 200px;
+
+        .tile__2f4f7,
+        .background_fb62e2 {
+            background: none !important;
+        }
+
+        .border__2f4f7 {
+            width: 84px;
+            height: 84px;
+            align-self: center;
+            justify-self: center;
+            border-radius: 100%;
+        }
+
+        .overlayContainer__2f4f7 {
+            z-index: 100;
+            width: 150px;
+            height: 150px;
+            align-self: center;
+            justify-self: center;
+            gap: 0;
+
+            .overlayBottom__2f4f7 {
+                height: 130px;
+                flex-direction: column-reverse;
+                justify-content: space-between;
+
+                .overlayTitle__2f4f7 {
+                    opacity: 1;
+                    top: 0;
+                    justify-content: center;
+                    padding: 6px;
+                    margin: 0px !important;
+                    background: linear-gradient(to top, black 0%, transparent 100%) !important;
+                    border-radius: 0px;
+                }
+
+                .statusContainer__2f4f7 {
+                    width: 84px;
+                    align-items: end;
+                    align-content: end;
+                    justify-content: end;
+
+                    .status__2f4f7 {
+                        backdrop-filter: blur(10px);
+                    }
+                }
+            }
+        }
+    }
+
+    .tileChild__2f4f7:has(.videoWrapper__2f4f7) {
+        .overlayContainer__2f4f7 {
+            width: calc(100% - 16px);
+            height: calc(100% - 16px);
+            z-index: auto;
+        }
+
+        .border__2f4f7 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: var(--custom-base-tile-border-radius);
+            pointer-events: none;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.listItems_affa7e {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0px;
+}
