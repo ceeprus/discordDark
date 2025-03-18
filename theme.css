@@ -89,6 +89,7 @@
   background: url("https://github.com/ceeprus/discordCss/blob/main/shiggy.gif?raw=true")
     center/80% no-repeat !important;
   image-rendering: pixelated;
+  will-change: transform; /* Performance optimization */
 }
 
 /* [[ QUOTES ]] */
@@ -212,7 +213,8 @@ path[fill="var(--status-danger)"]
   color: var(--accent-2);
 }
 
-div[class*="listItem"]:has(div[aria-label="Download Apps"]),
+/* Changed from :has() selector to target parent elements more efficiently */
+div[class*="listItem"] div[aria-label="Download Apps"],
 .guildSeparator__252b6 {
   display: none;
 }
@@ -401,6 +403,7 @@ background:rgba(0,0,0,0.5) ;
   src: url("https://vendicated.github.io/random-files/Twemoji.Mozilla.ttf")
     format("truetype");
   unicode-range: U+1F1E6-1F1FF;
+  font-display: swap; /* Improve performance by not blocking render */
 }
 
 @font-face {
@@ -410,6 +413,7 @@ background:rgba(0,0,0,0.5) ;
   src: url("https://vendicated.github.io/random-files/Dashless.woff2")
     format("woff2");
   unicode-range: U+002D;
+  font-display: swap; /* Improve performance by not blocking render */
 }
 
 [data-list-item-id^=channels___]:not([role=button]),
@@ -582,83 +586,81 @@ div.separator_c1e9c4:nth-of-type(9) {
 display: none;
 }
 
-/* DM call UI in VCs updated */
+/* DM call UI in VCs updated - Fixed nested CSS */
 .tile_d6271c {
     width: 200px !important;
+}
 
-    .tileSizer_d6271c {
-        aspect-ratio: 1 / 1;
-        width: 200px;
+.tile_d6271c .tileSizer_d6271c {
+    aspect-ratio: 1 / 1;
+    width: 200px;
+}
 
-        .tile__2f4f7,
-        .background_fb62e2 {
-            background: none !important;
-        }
+.tile_d6271c .tileSizer_d6271c .tile__2f4f7,
+.tile_d6271c .tileSizer_d6271c .background_fb62e2 {
+    background: none !important;
+}
 
-        .border__2f4f7 {
-            width: 84px;
-            height: 84px;
-            align-self: center;
-            justify-self: center;
-            border-radius: 100%;
-        }
+.tile_d6271c .tileSizer_d6271c .border__2f4f7 {
+    width: 84px;
+    height: 84px;
+    align-self: center;
+    justify-self: center;
+    border-radius: 100%;
+}
 
-        .overlayContainer__2f4f7 {
-            z-index: 100;
-            width: 150px;
-            height: 150px;
-            align-self: center;
-            justify-self: center;
-            gap: 0;
+.tile_d6271c .tileSizer_d6271c .overlayContainer__2f4f7 {
+    z-index: 100;
+    width: 150px;
+    height: 150px;
+    align-self: center;
+    justify-self: center;
+    gap: 0;
+}
 
-            .overlayBottom__2f4f7 {
-                height: 130px;
-                flex-direction: column-reverse;
-                justify-content: space-between;
+.tile_d6271c .tileSizer_d6271c .overlayContainer__2f4f7 .overlayBottom__2f4f7 {
+    height: 130px;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
 
-                .overlayTitle__2f4f7 {
-                    opacity: 1;
-                    top: 0;
-                    justify-content: center;
-                    padding: 6px;
-                    margin: 0px !important;
-                    background: linear-gradient(to top, black 0%, transparent 100%) !important;
-                    border-radius: 0px;
-                }
+.tile_d6271c .tileSizer_d6271c .overlayContainer__2f4f7 .overlayBottom__2f4f7 .overlayTitle__2f4f7 {
+    opacity: 1;
+    top: 0;
+    justify-content: center;
+    padding: 6px;
+    margin: 0px !important;
+    background: linear-gradient(to top, black 0%, transparent 100%) !important;
+    border-radius: 0px;
+}
 
-                .statusContainer__2f4f7 {
-                    width: 84px;
-                    align-items: end;
-                    align-content: end;
-                    justify-content: end;
+.tile_d6271c .tileSizer_d6271c .overlayContainer__2f4f7 .overlayBottom__2f4f7 .statusContainer__2f4f7 {
+    width: 84px;
+    align-items: end;
+    align-content: end;
+    justify-content: end;
+}
 
-                    .status__2f4f7 {
-                        backdrop-filter: blur(10px);
-                    }
-                }
-            }
-        }
-    }
+.tile_d6271c .tileSizer_d6271c .overlayContainer__2f4f7 .overlayBottom__2f4f7 .statusContainer__2f4f7 .status__2f4f7 {
+    backdrop-filter: blur(10px);
+}
 
-    .tileChild__2f4f7:has(.videoWrapper__2f4f7) {
-        .overlayContainer__2f4f7 {
-            width: calc(100% - 16px);
-            height: calc(100% - 16px);
-            z-index: auto;
-        }
+.tile_d6271c .tileChild__2f4f7:has(.videoWrapper__2f4f7) .overlayContainer__2f4f7 {
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    z-index: auto;
+}
 
-        .border__2f4f7 {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: var(--custom-base-tile-border-radius);
-            pointer-events: none;
-            width: 100%;
-            height: 100%;
-        }
-    }
+.tile_d6271c .tileChild__2f4f7:has(.videoWrapper__2f4f7) .border__2f4f7 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--custom-base-tile-border-radius);
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
 }
 
 .listItems_affa7e {
