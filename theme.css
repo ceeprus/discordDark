@@ -1,5 +1,8 @@
-@import url(https://minidiscordthemes.github.io/SettingsIcons/SettingsIcons.theme.css);
 
+@import url(https://minidiscordthemes.github.io/SettingsIcons/SettingsIcons.theme.css);
+@import url(https://davart154.github.io/Themes/Snippets/Two-Row%20Chat%20Bar%20Layout/TwoRowChatBar.css);
+
+.visual-refresh.theme-midnight, .visual-refresh .theme-midnight, 
 :root {
   --theme-h: 0;
   --theme-s: 0%;
@@ -30,14 +33,21 @@
   /* color of accented buttons when clicked */
   --accent-5: hsl(278, 80%, 28%);
   /* color of mentions and messages that mention you */
-  --mention: hsla(278, 80%, 52%, 0.08);
+  --background-mentioned: hsla(278, 80%, 52%, 0.08);
   /* color of mentions and messages that mention you when hovered */
-  --mention-hover: hsla(278, 80%, 52%, 0.05);
-
-  --brand-experiment: hsl(278, 80%, 52%);
-  --status-danger: var(--accent-2);
+  --background-mentioned-hover: hsla(278, 80%, 52%, 0.05); 
+  --mention-background: var(--primary-900-hsl);
+  --bg-brand: hsl(278, 80%, 52%);
+  --text-brand: hsl(278, 80%, 52%);
+  --text-danger: var(--accent-2);
+  --text-feedback-critical: hsl(278, 100%, 100%);
   /* Automatically resizing gif picker */
   --expression-picker-aspect-ratio: 1.125 / 1;
+  --status-danger:hsl(278, 80%, 52%);
+  /* Custom Emoji button */
+  --customEmojiIconURL: url(https://cdn.discordapp.com/emojis/1024751291504791654.gif?size=128&quality=lossless);
+  --customEmojiIconMask: url(https://cdn.discordapp.com/emojis/1024751291504791654.gif?size=128&quality=lossless);
+
 }
 
 /*        ▄██████████████████████████████████████████
@@ -63,10 +73,10 @@
                     █                 ██ █▀  █       
                     ▀                  █ ▀    █      */
 
-/* Shiggy loader */
-.container_a2f514.fixClipping_efbae7 > .content_a2f514 {
-  position: relative;
-}
+  /* Shiggy loader */
+  .container_a2f514.fixClipping_efbae7 > .content_a2f514 {
+    position: relative;
+  }
 
 .container_a2f514.fixClipping_efbae7 > .content_a2f514 .ready_a2f514 {
   display: none;
@@ -152,9 +162,9 @@ path[fill="var(--status-danger)"]
   /* button hovered */
   --brand-600: var(--accent-5);
   /* button pressed */
-  --mention-background: var(--mention);
+  --mention-background: var(--background-mentioned);
   --mention-foreground: var(--accent-2);
-  --background-message-highlight: var(--mention);
+  --background-message-highlight: var(--background-mentioned);
   --background-message-highlight-hover: var(--mention-hover);
 }
 
@@ -163,11 +173,6 @@ path[fill="var(--status-danger)"]
   background: var(--accent-3) !important;
 }
 
-/* replace ping yellow */
-.theme-dark {
-  --background-mentioned: var(--mention);
-  --background-mentioned-hover: var(--mention-hover);
-}
 
 /* mention message left edge */
 .mentioned__5126c:before {
@@ -185,32 +190,6 @@ path[fill="var(--status-danger)"]
   --green-530: var(--accent-5);
   /* green button click */
   --text-positive: var(--accent-1);
-}
-
-/* Add danger colours to dangerous user actions */
-#user-context-close-dm,
-#user-context-remove-friend,
-#user-context-block {
-  color: var(--accent-2);
-}
-
-#user-context-close-dm:active,
-#user-context-remove-friend:active,
-#user-context-block:active {
-  background-color: var(--accent-5) !important;
-  color: var(--white-500) !important;
-}
-
-#user-context-close-dm[class*="focused_"],
-#user-context-remove-friend[class*="focused_"],
-#user-context-block[class*="focused_"] {
-  background-color: var(--accent-5);
-  color: var(--white-500);
-}
-
-/* kick ban timeout  ^^^ */
-.colorDanger_c1e9c4 {
-  color: var(--accent-2);
 }
 
 /* Changed from :has() selector to target parent elements more efficiently */
@@ -285,11 +264,13 @@ background:rgba(0,0,0,0.5) ;
   display: none;
 }
 
-/* hide the ? on left top */
-[aria-label*='Help'],
+div[aria-label="Help"] {
+  display: none !important;
+}
 
 /* Text Bar */
 [aria-label*='Open sticker picker'],
+ [aria-label*="Apps"],
 [aria-label*='Send a gift'],
 [class*=channelAppLauncher_] {
   display: none;
@@ -301,12 +282,6 @@ background:rgba(0,0,0,0.5) ;
 }
 
 #channel-attach-SLASH_COMMAND,
-/* Removes Chatbox from channel that don't allow you to communicate */
-.channelTextAreaDisabled__74017,
-/* Removes Follow banner on bottom of channels */
-.wrapper__44df5 {
-  display: none;
-}
 
 [id="message-tts"],
 [id="message-copy-text"],
@@ -478,14 +453,12 @@ background:rgba(0,0,0,0.5) ;
 }
 
 /* Custom Emoji Button */
-.sprite__04eed.spriteColored__04eed {
-  background-image: url(https://cdn.discordapp.com/emojis/1024751291504791654.gif?size=128&quality=lossless);
-  background-size: 24px;
+[class*=emojiButton] [class*=spriteColored]{
+  background: var(--customEmojiIconURL) center/contain no-repeat;
 }
 
-.sprite__04eed.spriteGreyscale__04eed {
-  mask-image: url(https://cdn.discordapp.com/emojis/1024751291504791654.png?size=128&quality=lossless);
-  mask-size: 24px;
+[class*=emojiButton] [class*=spriteGreyscale]{
+  mask: var(--customEmojiIconMask) center/contain no-repeat;
 }
 
 /* context menu hover color */
@@ -505,7 +478,7 @@ background:rgba(0,0,0,0.5) ;
 }
 
 /* why would i add you as friend if im already your friend? */
-[class*="biteSize_"] :is([aria-label="Friends"]) {
+[class*="biteSize_"] :is([aria-label="Friend"]) {
   display: none;
 }
 
@@ -574,126 +547,3 @@ background:rgba(0,0,0,0.5) ;
     opacity: 50% !important;
 }
 
-/* action buttons */
-.actionButtons_e131a9 {
-    scale: .9;
-    margin-bottom: -4px;
-    margin-top: -4px;
-}
-
-/* Remove seperator in report msg */
-div.separator_c1e9c4:nth-of-type(9) {
-display: none;
-}
-
-/* DM call UI in VCs updated - Fixed nested CSS */
-.callContainer_cb9592 {
-    .tile_d6271c {
-        width: 200px !important;
-
-        .tileSizer_d6271c {
-            aspect-ratio: 1 / 1;
-            width: 200px;
-
-            .tile__2f4f7,
-            .background_fb62e2 {
-                background: none !important;
-            }
-
-            .border__2f4f7 {
-                width: 84px;
-                height: 84px;
-                align-self: center;
-                justify-self: center;
-                border-radius: 100%;
-            }
-
-            .overlayContainer__2f4f7 {
-                z-index: 100;
-                width: 150px;
-                height: 150px;
-                align-self: center;
-                justify-self: center;
-                gap: 0;
-
-                .overlayBottom__2f4f7 {
-                    height: 130px;
-                    flex-direction: column-reverse;
-                    justify-content: space-between;
-
-                    .overlayTitle__2f4f7 {
-                        opacity: 1;
-                        top: 0;
-                        justify-content: center;
-                        padding: 6px;
-                        margin: 0px !important;
-                        background: linear-gradient(to top, black 0%, transparent 100%) !important;
-                        border-radius: 0px;
-                    }
-
-                    .statusContainer__2f4f7 {
-                        width: 84px;
-                        align-items: end;
-                        align-content: end;
-                        justify-content: end;
-
-                        .status__2f4f7 {
-                            backdrop-filter: blur(10px);
-                        }
-                    }
-                }
-            }
-        }
-
-        .tileChild__2f4f7:has(.videoWrapper__2f4f7) {
-            .overlayContainer__2f4f7 {
-                width: calc(100% - 16px);
-                height: calc(100% - 16px);
-                z-index: auto;
-            }
-
-            .border__2f4f7 {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                border-radius: var(--custom-base-tile-border-radius);
-                pointer-events: none;
-                width: 100%;
-                height: 100%;
-            }
-        }
-    }
-
-    .row_d6271c:has(.singleUserRoot__4ad81) {
-        width: 100% !important;
-
-        .tile_d6271c,
-        .tileSizer_d6271c {
-            width: 100% !important;
-            aspect-ratio: auto;
-
-            .singleUserRoot__4ad81 {
-                background: none;
-                padding: 0px;
-
-                img {
-                    display: none;
-                }
-
-                .buttonContainer__4ad81 {
-                    margin-top: 0px;
-                }
-            }
-        }
-    }
-
-    .listItems_affa7e {
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 0px;
-    }
-}
