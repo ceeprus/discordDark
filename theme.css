@@ -1,4 +1,3 @@
-
 @import url(https://minidiscordthemes.github.io/SettingsIcons/SettingsIcons.theme.css);
 @import url(https://davart154.github.io/Themes/Snippets/Two-Row%20Chat%20Bar%20Layout/TwoRowChatBar.css);
 
@@ -20,7 +19,7 @@
   --primary-800-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 13.3%);
   --primary-830-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 15.7%);
   --primary-860-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 18.1%);
-  --primary-900-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 19.8%);
+  --primary-900-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 19.8%); 
 
   /* color of links */
   --accent-1: hsl(278, 80%, 60%);
@@ -47,7 +46,6 @@
   /* Custom Emoji button */
   --customEmojiIconURL: url(https://cdn.discordapp.com/emojis/1024751291504791654.gif?size=128&quality=lossless);
   --customEmojiIconMask: url(https://cdn.discordapp.com/emojis/1024751291504791654.gif?size=128&quality=lossless);
-
 }
 
 /*        ▄██████████████████████████████████████████
@@ -204,18 +202,6 @@ div[class*="listItem"] div[aria-label="Download Apps"],
 }
 [class^="userPopoutInner_"] [class^="blockquoteContainer_"] {
   max-height: 90px;
-}
-
-/* hammin */
-[class^="panels_c48ade"]::before {
-  content: "";
-  width: 75px;
-  height: 80px;
-  left: 179px;
-  margin-top: -66px;
-  scale: 0.6;
-  position: absolute;
-  background-image: url("https://cdn.discordapp.com/emojis/1335640482398732290.gif?size=96&quality=lossless");
 }
 
 /* Rounded Context Menu */
@@ -570,7 +556,6 @@ div[aria-label="Help"] {
             }
 
             .overlayContainer__2f4f7 {
-                z-index: 100;
                 width: 150px;
                 height: 150px;
                 align-self: center;
