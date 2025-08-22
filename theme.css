@@ -1,0 +1,631 @@
+@import url(https://minidiscordthemes.github.io/SettingsIcons/SettingsIcons.theme.css);
+@import url(https://davart154.github.io/Themes/Snippets/Two-Row%20Chat%20Bar%20Layout/TwoRowChatBar.css);
+
+.visual-refresh.theme-midnight, .visual-refresh .theme-midnight, 
+:root {
+  --theme-h: 0;
+  --theme-s: 0%;
+  --theme-l: 5%;
+  --primary-500-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) + 11.9%);
+  --primary-530-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) + 6.7%);
+  --primary-560-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) + 2.9%);
+  --primary-600-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) + 0%);
+  --primary-630-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 2.6%);
+  --primary-645-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 3.7%);
+  --primary-660-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 5.9%);
+  --primary-700-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 8.1%);
+  --primary-730-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 9.6%);
+  --primary-760-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 11.4%);
+  --primary-800-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 13.3%);
+  --primary-830-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 15.7%);
+  --primary-860-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 18.1%);
+  --primary-900-hsl: var(--theme-h) var(--theme-s) calc(var(--theme-l) - 19.8%); 
+
+  /* color of links */
+  --accent-1: hsl(278, 80%, 60%);
+  /* color of unread dividers and some indicators */
+  --accent-2: hsl(278, 80%, 52%);
+  /* color of accented buttons */
+  --accent-3: hsl(278, 80%, 44%);
+  /* color of accented buttons when hovered */
+  --accent-4: hsl(278, 80%, 36%);
+  /* color of accented buttons when clicked */
+  --accent-5: hsl(278, 80%, 28%);
+  /* color of mentions and messages that mention you */
+  --background-mentioned: hsla(278, 80%, 52%, 0.08);
+  /* color of mentions and messages that mention you when hovered */
+  --background-mentioned-hover: hsla(278, 80%, 52%, 0.05); 
+  --mention-background: var(--primary-900-hsl);
+  --bg-brand: hsl(278, 80%, 52%);
+  --text-brand: hsl(278, 80%, 52%);
+  --brand-experiment: hsl(278, 80%, 52%);
+  --text-danger: var(--accent-2);
+  --text-feedback-critical: hsl(278, 100%, 100%);
+  /* Automatically resizing gif picker */
+  --expression-picker-aspect-ratio: 1.125 / 1;
+  --status-danger:hsl(278, 80%, 52%);
+  /* Custom Emoji button */
+  --customEmojiIconURL: url(https://cdn.discordapp.com/emojis/1024751291504791654.gif?size=128&quality=lossless);
+  --customEmojiIconMask: url(https://cdn.discordapp.com/emojis/1024751291504791654.gif?size=128&quality=lossless);
+}
+
+/*        ▄██████████████████████████████████████████
+        █████████████████████████████████████████████
+       ██████████████████████████████████████████████
+      ████████████████████▀██████████████████████████
+      ██████████ █████████  ▀████████████████████████
+      █████████▀  ████████    ▀██████████████████████
+      █████████   ▀███████   █▄▀▀▀████████████▀▀█████
+      ███████████▄████████          ▄██████████▄ ████
+      ████████▀   █████████      ▄██████████████  ███
+      ▀███████        █████     ██████ ███████   ████
+       ███████▄███▄▄   ████▄   █ ████▀ ███████  █████
+       ▀████████▀ █████ ▀████ █   ▀▀▀ ▀▀██████ ████▀ 
+        ████████▄  ████   ███▄█          █████████▀  
+         ███████▀▄   ▀▀      ▀▄          ████████▀   
+          ████████                       ███████     
+           ███████                       ████ ██     
+            ███▀████                     ████  █     
+             ██ █████                  █████▀▄█      
+                  ███               ▄██▀ ███ █       
+                   ██          ▄▄▄▄▀▀██  ██  █       
+                    █                 ██ █▀  █       
+                    ▀                  █ ▀    █      */
+
+  /* Shiggy loader */
+  .container_a2f514.fixClipping_efbae7 > .content_a2f514 {
+    position: relative;
+  }
+
+.container_a2f514.fixClipping_efbae7 > .content_a2f514 .ready_a2f514 {
+  display: none;
+}
+
+.container_a2f514.fixClipping_efbae7
+  > .content_a2f514
+  .ready_a2f514
+  + .text_a2f514 {
+  top: 50px;
+}
+
+.container_a2f514.fixClipping_efbae7 > .content_a2f514::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+  background: url("https://github.com/ceeprus/discordCss/blob/main/shiggy.gif?raw=true")
+    center/80% no-repeat !important;
+  image-rendering: pixelated;
+  will-change: transform; /* Performance optimization */
+}
+
+/* [[ QUOTES ]] */
+[class*="blockquoteDivider__"] {
+  background: var(--brand-experiment);
+}
+
+/* replace ping/strikethrough red */
+.numberBadge__2b1f5,
+/* dm unread number */
+.mention__3b95d
+
+/* "NEW" serverlist indicator */ {
+  background: var(--accent-2) !important;
+}
+
+/* unread dividers */
+.divider__908e2 {
+  --divider-color: var(--accent-2);
+}
+
+/* mute button strikethrough */
+.icon__07f91 {
+  color: var(--accent-2) !important;
+}
+
+path[fill="var(--status-danger)"]
+
+/* vencord game activity strikethrough */ {
+  fill: var(--accent-2) !important;
+}
+
+.theme-dark {
+  --blue-345: var(--accent-1);
+  /* links */
+  --brand-260: var(--accent-2);
+  /* "NEW" channel list indicator */
+  --brand-360: var(--accent-2);
+  /* bot labels, dm button, spotify progressbar */
+  --brand-430: var(--accent-4);
+  /* send button hover */
+  --brand-500: var(--accent-3);
+  /* buttons */
+  --brand-560: var(--accent-4);
+  /* button hovered */
+  --brand-600: var(--accent-5);
+  /* button pressed */
+  --mention-background: var(--background-mentioned);
+  --mention-foreground: var(--accent-2);
+  --background-message-highlight: var(--background-mentioned);
+  --background-message-highlight-hover: var(--mention-hover);
+}
+
+/* settings checkbuttons */
+.container__87bf1.checked__87bf1 {
+  background: var(--accent-3) !important;
+}
+
+
+/* mention message left edge */
+.mentioned__5126c:before {
+  background: var(--accent-3) !important;
+}
+
+/* replace green */
+.theme-dark {
+  --green-360: var(--accent-2);
+  /* replace other green stuff */
+  --green-430: var(--accent-3);
+  /* green buttons (like invite) */
+  --green-500: var(--accent-4);
+  /* green button hover */
+  --green-530: var(--accent-5);
+  /* green button click */
+  --text-positive: var(--accent-1);
+}
+
+/* Changed from :has() selector to target parent elements more efficiently */
+div[class*="listItem"] div[aria-label="Download Apps"],
+.guildSeparator__252b6 {
+  display: none;
+}
+
+/* Discover */
+.footer__214dc, [aria-label*="Discover"] {
+  display: none;
+}
+[class^="userPopoutInner_"] [class^="blockquoteContainer_"] {
+  max-height: 90px;
+}
+
+/* Rounded Context Menu */
+.menu_c1e9c4,
+.colorDefault_c1e9c4 {
+  border-radius: 15px;
+}
+
+/* edited text */
+.timestamp_c19a55:not(.timestampInline_c19a55) time::after {
+  content: " (" attr(aria-label) ")";
+}
+
+.edited_c19a55:not(.message-translate-indicator) {
+  display: none;
+}
+
+/* Fav gif icon */
+.imageAccessory_af017a {
+  left: unset;
+  right: 6px;
+
+}
+/* Fav gif icon opacity*/
+.gifFavoriteButton_b7e1cb {
+background:rgba(0,0,0,0.5) ;
+}
+
+/* image maximized forward button */
+.forward_fb6520 {
+  display: none;
+}
+
+/* Message shift-hover */
+[aria-label*="Copy Message ID"] {
+  display: none;
+}
+
+/* Hide some buttons in user context menu */
+#user-context-invite-to-server,
+#user-context-call,
+#user-context-add-friend,
+#user-context-voice-move,
+#user-context-invite-to-listen,
+#guild-context-privacy {
+  display: none;
+}
+
+div[aria-label="Help"] {
+  display: none !important;
+}
+
+/* Text Bar */
+[aria-label*='Open sticker picker'],
+ [aria-label*="Apps"],
+[aria-label*='Send a gift'],
+[class*=channelAppLauncher_] {
+  display: none;
+}
+
+/* image hover */
+[aria-label*="Edit Image with Apps"] {
+  display: none;
+}
+
+#channel-attach-SLASH_COMMAND,
+
+[id="message-tts"],
+[id="message-copy-text"],
+[id="message-apps"],
+[id="message-thread"],
+[id="message-report"] {
+  display: none;
+}
+
+[href="/store"],
+[aria-label*="Share Nitro with Friends"],
+[href="/shop"] {
+  display: none;
+}
+
+/* show the url masked links take you to in the message */
+.anchor_edefb8[title$=")"]::after {
+  font-size: 0.7rem;
+  content: " (" attr(href) ")";
+  filter: grayscale(0.4);
+}
+
+/* Make jump to present/jump to original/mark as read bars smaller and hug the right */
+.barBase__0f481 {
+  width: fit-content;
+  margin-left: auto;
+}
+
+/* End make jump to present/jump to original/mark as read bars smaller and hug the right */
+[class^="form-"]:before,
+[class^="children-"]:after {
+  display: none;
+}
+
+/* set channel status */
+.linkBottom__2ea32 {
+  display: none;
+}
+
+/* this ("x in voice" scroll indicator) */
+[class^="bar__"]:has([class^="voiceChannelsIcon__"]) {
+  display: none;
+}
+
+/* Hide show all voice channels button */
+.voiceChannelsButton__29444 {
+  display: none;
+}
+
+/* channels and roles tab */
+.container__0b563,
+.header__0b563,
+.scrollerContainer_c6b11b .container_c2efea,
+.theme-dark .scrollerContainer_c6b11b,
+.theme-dark .emptyPage__5d7c9,
+.theme-dark .container_c2efea {
+  background-color: var(--home-background) !important;
+}
+
+/* remove the funny little gradient on ^ */
+.theme-dark .innerHeader__0b563:after {
+  display: none;
+}
+
+/* Compact experiment server config warning */
+#experiments-tab [class^="description_"] {
+  overflow: hidden;
+}
+
+#experiments-tab [class^="description_"] div:first-of-type {
+  float: left;
+}
+
+#experiments-tab [class^="description_"] div + div {
+  font-size: 0;
+  line-height: 0;
+  float: right;
+}
+
+#experiments-tab [class^="description_"] div + div:after {
+  filter: grayscale();
+  content: "⚠ No server configuration";
+  line-height: 20px;
+  font-size: 14px;
+}
+
+[aria-label="Create Invite"] svg {
+  display: none;
+}
+
+/* Improved dashless channelnames with added selectors, with flag emoji support for platforms that lack them */
+@font-face {
+  font-family: "Twemoji Mozilla";
+  src: url("https://vendicated.github.io/random-files/Twemoji.Mozilla.ttf")
+    format("truetype");
+  unicode-range: U+1F1E6-1F1FF;
+  font-display: swap; /* Improve performance by not blocking render */
+}
+
+@font-face {
+  font-family: "dashless";
+  size-adjust: 100%;
+  /*adjust this to change word spacing*/
+  src: url("https://vendicated.github.io/random-files/Dashless.woff2")
+    format("woff2");
+  unicode-range: U+002D;
+  font-display: swap; /* Improve performance by not blocking render */
+}
+
+[data-list-item-id^=channels___]:not([role=button]),
+/* channel list */
+[class^=titleWrapper]>h1,
+/* top bar with topic */
+[class^=titleWrapper]>h2,
+/* top bar in thread view */
+[id^=":r"]>h1,
+/* topic popup */
+[class^=resultChannel],
+[class^=channelNameContainer_],
+[class^=searchAnswer_],
+/* search */
+.channelWithIcon,
+/* channel mentions in chat */
+[class^=emptyChannelIcon_]+h3,
+/* start of new channel */
+[class^=emptyChannelIcon_]~[class*=description_],
+[class^=browser_] [class*=channelText_],
+/* channel browser*/
+[class^=returnButton_] [class^=text-],
+/*return button in channel browser*/
+[class^=placeholder][class*=slateTextArea],
+/* chat input placeholder text */
+[class^=auditLog_] [class^=overflowEllipsis_] strong,
+/* audit log */
+.vc-permviewer-perms-title,
+/* permissionsviewer */
+[class^=headerChannelContainer_]>div,
+/* invite to channel dialog */
+[class^=uploadDropModal_] strong,
+/* file drag upload */
+[class^=channelNameSpan_]
+
+/* inbox */ {
+  font-family: "Twemoji Mozilla", "dashless", var(--font-primary);
+}
+
+/*discord loading page*/
+.container_a2f514.fixClipping_efbae7 {
+  background: 0 0;
+  backdrop-filter: blur(5px);
+}
+
+[class*="expressionPickerPositionLayer_"] [class*="positionContainer_"] {
+  height: calc(100vh - 128px);
+}
+
+[class*="expressionPickerPositionLayer_"] [class*="drawerSizingWrapper_"] {
+  max-height: 100%;
+  bottom: 0px;
+  height: auto;
+  aspect-ratio: var(--expression-picker-aspect-ratio);
+}
+
+/* Fixes soundmoji picker which has a hardcoded height */
+[class*="expressionPickerPositionLayer_"]
+  [class*="soundboardContainer_"]
+  [class*="picker_"] {
+  height: 100%;
+}
+
+/* Custom Emoji Button */
+[class*=emojiButton] [class*=spriteColored]{
+  background: var(--customEmojiIconURL) center/contain no-repeat;
+}
+
+[class*=emojiButton] [class*=spriteGreyscale]{
+  mask: var(--customEmojiIconMask) center/contain no-repeat;
+}
+
+/* context menu hover color */
+.colorDefault_c1e9c4.focused_c1e9c4 {
+  background-color: var(--accent-5);
+}
+
+/* no line clamp on new profiles */
+[class*="descriptionClamp"] {
+  line-clamp: unset;
+  -webkit-line-clamp: unset;
+  max-height: unset;
+}
+
+[class*="viewFullBio"] {
+  display: none;
+}
+
+/* why would i add you as friend if im already your friend? */
+[class*="biteSize_"] :is([aria-label="Friend"]) {
+  display: none;
+}
+
+/* no more ads in voice channels */
+.wrapper_e9b191 {
+  display: none;
+}
+
+/* Vc right click ui */
+#user-context-note,
+#user-context-secure-frames-user-verification,
+#user-context-verify,
+#user-context-apps {
+  display: none;
+}
+
+/* channel list */  
+/* squish channel height/spacing */
+[class="link__2ea32"] {
+    padding-block: 3px;
+}
+
+/* shrink all channel icons */
+[class="iconContainer__2ea32"]>svg[role="img"] {
+    scale: 0.8;
+}
+
+/* squeeze channel list left */
+.wrapper__2ea32:not(.typeThread__2ea32) {
+    margin-left: 1 !important;
+}
+.wrapper__29444 {
+    padding-left: 8px !important;
+}
+
+/* fix threads "spine" */
+.spineBorder__5b40b {
+    bottom: 20px !important;
+    left: 16px;
+}
+.containerDefault_c69b6d>svg {
+    top: 5px;
+    left: 16px;
+}
+.wrapper__2ea32.typeThread__2ea32 {
+    margin-left: 28px;
+}
+
+/* make unread channel's icons brighter (because the unread indicator is now hidden)*/
+.modeUnreadImportant__2ea32 .icon__2ea32,
+.modeUnreadImportant__2ea32:hover .icon__2ea32,
+.modeSelected__2ea32:hover .icon__2ea32 {
+    color: var(--interactive-active);
+}
+
+/* dim all category labels */
+[class="mainContent__29444"] {
+    opacity: 70%;
+}
+
+/* hide category dropdown arrows, instead dim label when collapsed */
+[class="mainContent__29444"]>[class="icon__29444"] {
+    display: none;
+}
+[class="mainContent__29444"][aria-expanded="false"] {
+    opacity: 50% !important;
+}
+
+/* dm call ui for servers */
+.callContainer_cb9592 {
+    .tile_d6271c {
+        width: 200px !important;
+
+        .tileSizer_d6271c {
+            aspect-ratio: 1 / 1;
+            width: 200px;
+
+            .tile__2f4f7,
+            .background_fb62e2 {
+                background: none !important;
+            }
+
+            .border__2f4f7 {
+                width: 84px;
+                height: 84px;
+                align-self: center;
+                justify-self: center;
+                border-radius: 100%;
+            }
+
+            .overlayContainer__2f4f7 {
+                width: 150px;
+                height: 150px;
+                align-self: center;
+                justify-self: center;
+                gap: 0;
+
+                .overlayBottom__2f4f7 {
+                    height: 130px;
+                    flex-direction: column-reverse;
+                    justify-content: space-between;
+
+                    .overlayTitle__2f4f7 {
+                        opacity: 1;
+                        top: 0;
+                        justify-content: center;
+                        padding: 6px;
+                        margin: 0px !important;
+                        background: linear-gradient(to top, black 0%, transparent 100%) !important;
+                        border-radius: 0px;
+                    }
+
+                    .statusContainer__2f4f7 {
+                        width: 84px;
+                        align-items: end;
+                        align-content: end;
+                        justify-content: end;
+
+                        .status__2f4f7 {
+                            backdrop-filter: blur(10px);
+                        }
+                    }
+                }
+            }
+        }
+
+        .tileChild__2f4f7:has(.videoWrapper__2f4f7) {
+            .overlayContainer__2f4f7 {
+                width: calc(100% - 16px);
+                height: calc(100% - 16px);
+                z-index: auto;
+            }
+
+            .border__2f4f7 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: var(--custom-base-tile-border-radius);
+                pointer-events: none;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .row_d6271c:has(.singleUserRoot__4ad81) {
+        width: 100% !important;
+
+        .tile_d6271c,
+        .tileSizer_d6271c {
+            width: 100% !important;
+            aspect-ratio: auto;
+
+            .singleUserRoot__4ad81 {
+                background: none;
+                padding: 0px;
+
+                img {
+                    display: none;
+                }
+
+                .buttonContainer__4ad81 {
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+
+    .listItems_affa7e {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0px;
+    }
+}
