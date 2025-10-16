@@ -153,7 +153,7 @@ path[fill="var(--status-danger)"]
 }
 
 /* settings checkbuttons */
-.container__87bf1.checked__87bf1 {
+.container__3f21e.checked__3f21e {
   background: var(--accent-3) !important;
 }
 
@@ -194,15 +194,6 @@ div[class*="listItem"] div[aria-label="Download Apps"],
 .menu_c1e9c4,
 .colorDefault_c1e9c4 {
   border-radius: 15px;
-}
-
-/* edited text */
-.timestamp_c19a55:not(.timestampInline_c19a55) time::after {
-  content: " (" attr(aria-label) ")";
-}
-
-.edited_c19a55:not(.message-translate-indicator) {
-  display: none;
 }
 
 /* Fav gif icon */
@@ -629,3 +620,4 @@ div[aria-label="Help"] {
         gap: 0px;
     }
 }
+
