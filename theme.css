@@ -255,6 +255,7 @@ div[aria-label="Help"] {
 }
 
 [href="/store"],
+[href="/quest-home"],
 [aria-label*="Share Nitro with Friends"],
 [href="/shop"] {
   display: none;
