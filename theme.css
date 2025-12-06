@@ -40,7 +40,6 @@
   --text-brand: hsl(278, 80%, 52%);
   --brand-experiment: hsl(278, 80%, 52%);
   --text-danger: var(--accent-2);
-  --text-feedback-critical: hsl(278, 100%, 100%);
   /* Automatically resizing gif picker */
   --expression-picker-aspect-ratio: 1.125 / 1;
   --status-danger:hsl(278, 80%, 52%);
