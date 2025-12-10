@@ -632,3 +632,8 @@ div[aria-label="Help"] {
 .trailing_c38106 > .button__85643 {
   display: none;
 }
+
+/* Disable "Voice Invite Suggestions, press to dismiss" */
+.animation_f2170c {
+  display: none;
+}
