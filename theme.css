@@ -637,3 +637,16 @@ div[aria-label="Help"] {
 .animation_f2170c {
   display: none;
 }
+
+/* mention background */
+.message__5126c.mentioned__5126c {
+  background-color: var(--background-mentioned);
+}
+
+.message__5126c.mentioned__5126c:hover {
+  background-color: var(--background-mentioned-hover);
+}
+
+.message__5126c.mentioned__5126c::before {
+  background-color: var(--background-mentioned-accent);
+}
