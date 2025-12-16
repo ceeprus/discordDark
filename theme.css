@@ -1,7 +1,4 @@
-@import url(https://minidiscordthemes.github.io/SettingsIcons/SettingsIcons.theme.css);
-
-.visual-refresh.theme-midnight,
-.visual-refresh .theme-midnight,
+.visual-refresh.theme-midnight, .visual-refresh .theme-midnight,
 :root {
   --theme-h: 0;
   --theme-s: 0%;
@@ -32,20 +29,39 @@
   /* color of accented buttons when clicked */
   --accent-5: hsl(278, 80%, 28%);
   /* color of mentions and messages that mention you */
-  --background-mentioned: hsla(278, 80%, 52%, 0.08);
+  --message-mentioned-background-default: hsla(278, 80%, 52%, 0.08);
   /* color of mentions and messages that mention you when hovered */
-  --background-mentioned-hover: hsla(278, 80%, 52%, 0.05);
-  --mention-background: var(--primary-900-hsl);
+  --message-mentioned-background-hover: hsla(278, 80%, 52%, 0.05);
+  --message-mention-background: var(--primary-900-hsl);
   --bg-brand: hsl(278, 80%, 52%);
   --text-brand: hsl(278, 80%, 52%);
   --brand-experiment: hsl(278, 80%, 52%);
   --text-danger: var(--accent-2);
+  --blue-345: var(--accent-1);
+  /* links */
+  --brand-260: var(--accent-2);
+  /* "NEW" channel list indicator */
+  --brand-360: var(--accent-2);
+  /* bot labels, dm button, spotify progressbar */
+  --brand-430: var(--accent-4);
+  /* send button hover */
+  --brand-500: var(--accent-3);
+  /* buttons */
+  --brand-560: var(--accent-4);
+  /* button hovered */
+  --brand-600: var(--accent-5);
+  /* button pressed */
+  --mention-background: var(--background-mentioned);
+  --mention-foreground: var(--accent-2);
+  --background-message-highlight: var(--background-mentioned);
+  --background-message-highlight-hover: var(--mention-hover);
   /* Automatically resizing gif picker */
   --expression-picker-aspect-ratio: 1.125 / 1;
   --status-danger: hsl(278, 80%, 52%);
   /* Custom Emoji button */
   --customEmojiIconURL: url(https://cdn.discordapp.com/emojis/1024751291504791654.gif?size=128&quality=lossless);
   --customEmojiIconMask: url(https://cdn.discordapp.com/emojis/1024751291504791654.gif?size=128&quality=lossless);
+  
 }
 
 /*        ▄██████████████████████████████████████████
@@ -105,50 +121,9 @@
   background: var(--brand-experiment);
 }
 
-/* replace ping/strikethrough red */
-.numberBadge__2b1f5,
-/* dm unread number */
-.mention__3b95d
-
-/* "NEW" serverlist indicator */ {
-  background: var(--accent-2) !important;
-}
-
-/* unread dividers */
-.divider__908e2 {
-  --divider-color: var(--accent-2);
-}
-
 /* mute button strikethrough */
 .icon__07f91 {
   color: var(--accent-2) !important;
-}
-
-path[fill="var(--status-danger)"]
-
-/* vencord game activity strikethrough */ {
-  fill: var(--accent-2) !important;
-}
-
-.theme-dark {
-  --blue-345: var(--accent-1);
-  /* links */
-  --brand-260: var(--accent-2);
-  /* "NEW" channel list indicator */
-  --brand-360: var(--accent-2);
-  /* bot labels, dm button, spotify progressbar */
-  --brand-430: var(--accent-4);
-  /* send button hover */
-  --brand-500: var(--accent-3);
-  /* buttons */
-  --brand-560: var(--accent-4);
-  /* button hovered */
-  --brand-600: var(--accent-5);
-  /* button pressed */
-  --mention-background: var(--background-mentioned);
-  --mention-foreground: var(--accent-2);
-  --background-message-highlight: var(--background-mentioned);
-  --background-message-highlight-hover: var(--mention-hover);
 }
 
 /* settings checkbuttons */
@@ -174,12 +149,6 @@ path[fill="var(--status-danger)"]
   --text-positive: var(--accent-1);
 }
 
-/* Changed from :has() selector to target parent elements more efficiently */
-div[class*="listItem"] div[aria-label="Download Apps"],
-.guildSeparator__252b6 {
-  display: none;
-}
-
 /* Discover */
 .footer__214dc,
 [aria-label*="Discover"] {
@@ -194,12 +163,6 @@ div[class*="listItem"]:has(
   display: none !important;
 }
 
-/* Rounded Context Menu */
-.menu_c1e9c4,
-.colorDefault_c1e9c4 {
-  border-radius: 15px;
-}
-
 /* Fav gif icon */
 .imageAccessory_af017a {
   left: unset;
@@ -208,16 +171,6 @@ div[class*="listItem"]:has(
 /* Fav gif icon opacity*/
 .gifFavoriteButton_b7e1cb {
   background: rgba(0, 0, 0, 0.5);
-}
-
-/* image maximized forward button */
-.forward_fb6520 {
-  display: none;
-}
-
-/* Message shift-hover */
-[aria-label*="Copy Message ID"] {
-  display: none;
 }
 
 /* Hide some buttons in user context menu */
@@ -244,15 +197,6 @@ div[aria-label="Help"] {
 
 /* image hover */
 [aria-label*="Edit Image with Apps"] {
-  display: none;
-}
-
-#channel-attach-SLASH_COMMAND,
-[id="message-tts"],
-[id="message-copy-text"],
-[id="message-apps"],
-[id="message-thread"],
-[id="message-report"] {
   display: none;
 }
 
@@ -289,52 +233,6 @@ div[aria-label="Help"] {
 
 /* this ("x in voice" scroll indicator) */
 [class^="bar__"]:has([class^="voiceChannelsIcon__"]) {
-  display: none;
-}
-
-/* Hide show all voice channels button */
-.voiceChannelsButton__29444 {
-  display: none;
-}
-
-/* channels and roles tab */
-.container__0b563,
-.header__0b563,
-.scrollerContainer_c6b11b .container_c2efea,
-.theme-dark .scrollerContainer_c6b11b,
-.theme-dark .emptyPage__5d7c9,
-.theme-dark .container_c2efea {
-  background-color: var(--home-background) !important;
-}
-
-/* remove the funny little gradient on ^ */
-.theme-dark .innerHeader__0b563:after {
-  display: none;
-}
-
-/* Compact experiment server config warning */
-#experiments-tab [class^="description_"] {
-  overflow: hidden;
-}
-
-#experiments-tab [class^="description_"] div:first-of-type {
-  float: left;
-}
-
-#experiments-tab [class^="description_"] div + div {
-  font-size: 0;
-  line-height: 0;
-  float: right;
-}
-
-#experiments-tab [class^="description_"] div + div:after {
-  filter: grayscale();
-  content: "⚠ No server configuration";
-  line-height: 20px;
-  font-size: 14px;
-}
-
-[aria-label="Create Invite"] svg {
   display: none;
 }
 
@@ -636,17 +534,4 @@ div[aria-label="Help"] {
 /* Disable "Voice Invite Suggestions, press to dismiss" */
 .animation_f2170c {
   display: none;
-}
-
-/* mention background */
-.message__5126c.mentioned__5126c {
-  background-color: var(--background-mentioned);
-}
-
-.message__5126c.mentioned__5126c:hover {
-  background-color: var(--background-mentioned-hover);
-}
-
-.message__5126c.mentioned__5126c::before {
-  background-color: var(--background-mentioned-accent);
 }
