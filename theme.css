@@ -88,22 +88,22 @@
                     ▀                  █ ▀    █      */
 
 /* Shiggy loader */
-.container_a2f514.fixClipping_efbae7 > .content_a2f514 {
+.a2f5142ba8328dfd-container.efbae7425593290b-fixClipping > .a2f5142ba8328dfd-content {
   position: relative;
 }
 
-.container_a2f514.fixClipping_efbae7 > .content_a2f514 .ready_a2f514 {
+.a2f5142ba8328dfd-container.efbae7425593290b-fixClipping > .a2f5142ba8328dfd-content .a2f5142ba8328dfd-ready {
   display: none;
 }
 
-.container_a2f514.fixClipping_efbae7
-  > .content_a2f514
-  .ready_a2f514
-  + .text_a2f514 {
+.a2f5142ba8328dfd-container.efbae7425593290b-fixClipping
+  > .a2f5142ba8328dfd-content
+  .a2f5142ba8328dfd-ready
+  + .a2f5142ba8328dfd-text {
   top: 50px;
 }
 
-.container_a2f514.fixClipping_efbae7 > .content_a2f514::before {
+.a2f5142ba8328dfd-container.efbae7425593290b-fixClipping > .a2f5142ba8328dfd-content::before {
   content: "";
   position: absolute;
   bottom: 10px;
@@ -122,17 +122,17 @@
 }
 
 /* mute button strikethrough */
-.icon__07f91 {
+._07f9193042954787-icon {
   color: var(--accent-2) !important;
 }
 
 /* settings checkbuttons */
-.container__3f21e.checked__3f21e {
+._3f21e80f8677ec40-container._3f21e80f8677ec40-checked {
   background: var(--accent-3) !important;
 }
 
 /* mention message left edge */
-.mentioned__5126c:before {
+._5126c0cd07f243a0-mentioned:before {
   background: var(--accent-3) !important;
 }
 
@@ -164,12 +164,12 @@ div[class*="listItem"]:has(
 }
 
 /* Fav gif icon */
-.imageAccessory_af017a {
+.af017ab847f75d02-imageAccessory {
   left: unset;
   right: 6px;
 }
 /* Fav gif icon opacity*/
-.gifFavoriteButton_b7e1cb {
+.b7e1cb0370c2dd0e-gifFavoriteButton {
   background: rgba(0, 0, 0, 0.5);
 }
 
@@ -208,14 +208,14 @@ div[aria-label="Help"] {
 }
 
 /* show the url masked links take you to in the message */
-.anchor_edefb8[title$=")"]::after {
+.edefb8e22d63c542-anchor[title$=")"]::after {
   font-size: 0.7rem;
   content: " (" attr(href) ")";
   filter: grayscale(0.4);
 }
 
 /* Make jump to present/jump to original/mark as read bars smaller and hug the right */
-.barBase__0f481 {
+._0f481cbbd7530492-barBase {
   width: fit-content;
   margin-left: auto;
 }
@@ -227,7 +227,7 @@ div[aria-label="Help"] {
 }
 
 /* set channel status */
-.linkBottom__2ea32 {
+._2ea32c412048f708-linkBottom {
   display: none;
 }
 
@@ -293,7 +293,7 @@ div[aria-label="Help"] {
 }
 
 /*discord loading page*/
-.container_a2f514.fixClipping_efbae7 {
+.a2f5142ba8328dfd-container.efbae7425593290b-fixClipping {
   background: 0 0;
   backdrop-filter: blur(5px);
 }
@@ -326,7 +326,7 @@ div[aria-label="Help"] {
 }
 
 /* context menu hover color */
-.colorDefault_c1e9c4.focused_c1e9c4 {
+.c1e9c47c23f12ca3-colorDefault.c1e9c47c23f12ca3-focused {
   background-color: var(--accent-5);
 }
 
@@ -347,7 +347,7 @@ div[aria-label="Help"] {
 }
 
 /* no more ads in voice channels */
-.wrapper__19b5e {
+._19b5e5f5dd1df486-wrapper {
   display: none;
 }
 
@@ -361,71 +361,71 @@ div[aria-label="Help"] {
 
 /* channel list */
 /* squish channel height/spacing */
-[class="link__2ea32"] {
+[class="_2ea32c412048f708-link"] {
   padding-block: 3px;
 }
 
 /* shrink all channel icons */
-[class="iconContainer__2ea32"] > svg[role="img"] {
+[class="_2ea32c412048f708-iconContainer"] > svg[role="img"] {
   scale: 0.8;
 }
 
 /* squeeze channel list left */
-.wrapper__2ea32:not(.typeThread__2ea32) {
+._2ea32c412048f708-wrapper:not(._2ea32c412048f708-typeThread) {
   margin-left: 1 !important;
 }
-.wrapper__29444 {
+._29444ba32c7fbeab-wrapper {
   padding-left: 8px !important;
 }
 
 /* fix threads "spine" */
-.spineBorder__5b40b {
+._5b40bdd67543ba35-spineBorder {
   bottom: 20px !important;
   left: 16px;
 }
-.containerDefault_c69b6d > svg {
+.c69b6db0641110f6-containerDefault > svg {
   top: 5px;
   left: 16px;
 }
-.wrapper__2ea32.typeThread__2ea32 {
+._2ea32c412048f708-wrapper._2ea32c412048f708-typeThread {
   margin-left: 28px;
 }
 
 /* make unread channel's icons brighter (because the unread indicator is now hidden)*/
-.modeUnreadImportant__2ea32 .icon__2ea32,
-.modeUnreadImportant__2ea32:hover .icon__2ea32,
-.modeSelected__2ea32:hover .icon__2ea32 {
+._2ea32c412048f708-modeUnreadImportant ._2ea32c412048f708-icon,
+._2ea32c412048f708-modeUnreadImportant:hover ._2ea32c412048f708-icon,
+._2ea32c412048f708-modeSelected:hover ._2ea32c412048f708-icon {
   color: var(--interactive-active);
 }
 
 /* dim all category labels */
-[class="mainContent__29444"] {
+[class="_29444ba32c7fbeab-mainContent"] {
   opacity: 70%;
 }
 
 /* hide category dropdown arrows, instead dim label when collapsed */
-[class="mainContent__29444"] > [class="icon__29444"] {
+[class="_29444ba32c7fbeab-mainContent"] > [class="_29444ba32c7fbeab-icon"] {
   display: none;
 }
-[class="mainContent__29444"][aria-expanded="false"] {
+[class="_29444ba32c7fbeab-mainContent"][aria-expanded="false"] {
   opacity: 50% !important;
 }
 
 /* dm call ui for servers */
-.callContainer_cb9592 {
-  .tile_d6271c {
+.cb9592ad77576717-callContainer {
+  .d6271c8ee3948714-tile {
     width: 200px !important;
 
-    .tileSizer_d6271c {
+    .d6271c8ee3948714-tileSizer {
       aspect-ratio: 1 / 1;
       width: 200px;
 
-      .tile__2f4f7,
-      .background_fb62e2 {
+      ._2f4f7eb58b61c328-tile,
+      .fb62e279d3f0a88a-background {
         background: none !important;
       }
 
-      .border__2f4f7 {
+      ._2f4f7eb58b61c328-border {
         width: 84px;
         height: 84px;
         align-self: center;
@@ -433,19 +433,19 @@ div[aria-label="Help"] {
         border-radius: 100%;
       }
 
-      .overlayContainer__2f4f7 {
+      ._2f4f7eb58b61c328-overlayContainer {
         width: 150px;
         height: 150px;
         align-self: center;
         justify-self: center;
         gap: 0;
 
-        .overlayBottom__2f4f7 {
+        ._2f4f7eb58b61c328-overlayBottom {
           height: 130px;
           flex-direction: column-reverse;
           justify-content: space-between;
 
-          .overlayTitle__2f4f7 {
+          ._2f4f7eb58b61c328-overlayTitle {
             opacity: 1;
             top: 0;
             justify-content: center;
@@ -465,7 +465,7 @@ div[aria-label="Help"] {
             align-content: end;
             justify-content: end;
 
-            .status__2f4f7 {
+            ._2f4f7eb58b61c328-status {
               backdrop-filter: blur(10px);
             }
           }
@@ -473,14 +473,14 @@ div[aria-label="Help"] {
       }
     }
 
-    .tileChild__2f4f7:has(.videoWrapper__2f4f7) {
-      .overlayContainer__2f4f7 {
+    ._2f4f7eb58b61c328-tileChild:has(._2f4f7eb58b61c328-videoWrapper) {
+      ._2f4f7eb58b61c328-overlayContainer {
         width: calc(100% - 16px);
         height: calc(100% - 16px);
         z-index: auto;
       }
 
-      .border__2f4f7 {
+      ._2f4f7eb58b61c328-border {
         position: absolute;
         top: 0;
         left: 0;
@@ -494,15 +494,15 @@ div[aria-label="Help"] {
     }
   }
 
-  .row_d6271c:has(.singleUserRoot__4ad81) {
+  .d6271c8ee3948714-row:has(._4ad815b9a8eb0838-singleUserRoot) {
     width: 100% !important;
 
-    .tile_d6271c,
-    .tileSizer_d6271c {
+    .d6271c8ee3948714-tile,
+    .d6271c8ee3948714-tileSizer {
       width: 100% !important;
       aspect-ratio: auto;
 
-      .singleUserRoot__4ad81 {
+      ._4ad815b9a8eb0838-singleUserRoot {
         background: none;
         padding: 0px;
 
@@ -517,7 +517,7 @@ div[aria-label="Help"] {
     }
   }
 
-  .listItems_affa7e {
+  .affa7e120767dd82-listItems {
     display: flex;
     align-content: center;
     justify-content: center;
@@ -526,12 +526,12 @@ div[aria-label="Help"] {
   }
 }
 /* Remove Discord Checkpoint related stuff */
-.messageListItem__5126c:has(.container__74acd),
-.trailing_c38106 > .button__85643 {
+._5126c0cd07f243a0-messageListItem:has(._74acdf600388a483-container),
+.c38106a3f0c3ca76-trailing > ._85643a485899904b-button {
   display: none;
 }
 
 /* Disable "Voice Invite Suggestions, press to dismiss" */
-.animation_f2170c {
+.f2170ce498f1df46-animation {
   display: none;
 }
