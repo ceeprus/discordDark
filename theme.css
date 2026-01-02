@@ -535,3 +535,12 @@ div[aria-label="Help"] {
 .f2170ce498f1df46-animation {
   display: none;
 }
+
+/* Full sized gif picker */
+[class*='_59d0d7075b521375-layerContainer'] [class*='_084343c4f11eaaab-positionLayer'] {
+    height: 90% !important;
+    [class*='drawerSizingWrapper__'] {
+        top: 3.5em !important;
+        height: calc(100% - 9em)
+    }
+}
