@@ -1,3 +1,4 @@
+
 .visual-refresh.theme-midnight, .visual-refresh .theme-midnight,
 :root {
   --theme-h: 0;
@@ -548,4 +549,9 @@ div[aria-label="Help"] {
 /* Best & most reliable way (Discord updates change the class hashes often) */
 [aria-label="Invite to Voice"] {
     display: none !important;
+}
+
+/* Gift button */
+div[class^="channelBottomBarArea"] div[class^="buttons_"] > div:not(div[class^="expression-picker-chat-input-button"]):not(div[class$="app-launcher-entrypoint"]):has(div[class^="lottieIcon_"]) {
+  display: none;
 }
