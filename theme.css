@@ -363,12 +363,12 @@ div[aria-label="Help"] {
 
 /* channel list */
 /* squish channel height/spacing */
-[class="_2ea32c412048f708-link"] {
+[class*="link__2ea32"] {
   padding-block: 3px;
 }
 
 /* shrink all channel icons */
-[class="_2ea32c412048f708-iconContainer"] > svg[role="img"] {
+[class*="iconContainer__2ea32"] > svg[role="img"] {
   scale: 0.8;
 }
 
@@ -401,15 +401,15 @@ div[aria-label="Help"] {
 }
 
 /* dim all category labels */
-[class="_29444ba32c7fbeab-mainContent"] {
+[class*="mainContent__29444"] {
   opacity: 70%;
 }
 
 /* hide category dropdown arrows, instead dim label when collapsed */
-[class="_29444ba32c7fbeab-mainContent"] > [class="_29444ba32c7fbeab-icon"] {
+[class*="mainContent__29444"] > [class*="icon__29444"] {
   display: none;
 }
-[class="_29444ba32c7fbeab-mainContent"][aria-expanded="false"] {
+[class*="mainContent__29444"][aria-expanded="false"] {
   opacity: 50% !important;
 }
 
@@ -528,7 +528,7 @@ div[aria-label="Help"] {
   }
 }
 /* Remove Discord Checkpoint related stuff */
-.messageListItem__5126c:has(.container__74acd),
+.messageListItem__5126c:has(.container_e9ca56),
 .trailing_c38106 > .button__85643 {
   display: none;
 }
@@ -539,7 +539,7 @@ div[aria-label="Help"] {
 }
 
 /* Full sized gif picker */
-[class*='_59d0d7075b521375-layerContainer'] [class*='_084343c4f11eaaab-positionLayer'] {
+[class*='layerContainer__59d0d'] [class*='positionLayer__08434'] {
     height: 90% !important;
     [class*='drawerSizingWrapper__'] {
         top: 3.5em !important;
