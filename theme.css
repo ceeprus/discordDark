@@ -1,4 +1,5 @@
 @import url('https://raw.githubusercontent.com/Benzeel/Bennys-Css-Snippets/refs/heads/main/ImageViewerTweaks.css');
+@import url(https://davart154.github.io/Themes/Snippets/Context%20Icons/ContextIconsSource.css);
 
 .visual-refresh.theme-midnight, .visual-refresh .theme-midnight,
 :root {
@@ -210,7 +211,7 @@ div[aria-label="Help"] {
 }
 
 /* show the url masked links take you to in the message */
-.anchor_edefb8[title$=")"]::after {
+.anchor__14d82[title$=")"]::after {
   font-size: 0.7rem;
   content: " (" attr(href) ")";
   filter: grayscale(0.4);
