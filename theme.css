@@ -35,11 +35,9 @@
   --message-mentioned-background-default: hsla(278, 80%, 52%, 0.08);
   /* color of mentions and messages that mention you when hovered */
   --message-mentioned-background-hover: hsla(278, 80%, 52%, 0.05);
-  --message-mention-background: var(--primary-900-hsl);
-  --bg-brand: hsl(278, 80%, 52%);
   --text-brand: hsl(278, 80%, 52%);
   --brand-experiment: hsl(278, 80%, 52%);
-  --text-danger: var(--accent-2);
+  --text-feedback-critical: var(--accent-2);
   --blue-345: var(--accent-1);
   /* links */
   --brand-260: var(--accent-2);
@@ -54,10 +52,8 @@
   /* button hovered */
   --brand-600: var(--accent-5);
   /* button pressed */
-  --mention-background: var(--background-mentioned);
+  --mention-background: var(--background-mentioned, hsla(278, 80%, 52%, 0.15));
   --mention-foreground: var(--accent-2);
-  --background-message-highlight: var(--background-mentioned);
-  --background-message-highlight-hover: var(--mention-hover);
   /* Automatically resizing gif picker */
   --expression-picker-aspect-ratio: 1.125 / 1;
   --status-danger: hsl(278, 80%, 52%);
@@ -113,7 +109,7 @@
   left: calc(50% - 100px);
   width: 200px;
   height: 200px;
-  background: url("https://github.com/ceeprus/discordCss/blob/main/shiggy.gif?raw=true")
+  background: url("https://github.com/ceeprus/discordDark/blob/main/shiggy.gif?raw=true")
     center/80% no-repeat !important;
   image-rendering: pixelated;
   will-change: transform; /* Performance optimization */
@@ -148,8 +144,8 @@
   --green-500: var(--accent-4);
   /* green button hover */
   --green-530: var(--accent-5);
+  --text-feedback-positive: var(--accent-1);
   /* green button click */
-  --text-positive: var(--accent-1);
 }
 
 /* Discover */
@@ -157,7 +153,7 @@
 [aria-label*="Discover"] {
   display: none;
 }
-[class^="userPopoutInner_"] [class^="blockquoteContainer_"] {
+.user-profile-popout [class^="blockquoteContainer_"] {
   max-height: 90px;
 }
 div[class*="listItem"]:has(
@@ -198,11 +194,6 @@ div[aria-label="Help"] {
   display: none;
 }
 
-/* image hover */
-[aria-label*="Edit Image with Apps"] {
-  display: none;
-}
-
 [href="/store"],
 [href="/quest-home"],
 [aria-label*="Share Nitro with Friends"],
@@ -224,10 +215,6 @@ div[aria-label="Help"] {
 }
 
 /* End make jump to present/jump to original/mark as read bars smaller and hug the right */
-[class^="form-"]:before,
-[class^="children-"]:after {
-  display: none;
-}
 
 /* set channel status */
 .linkBottom__2ea32 {
@@ -235,7 +222,7 @@ div[aria-label="Help"] {
 }
 
 /* this ("x in voice" scroll indicator) */
-[class^="bar__"]:has([class^="voiceChannelsIcon__"]) {
+[class^="bar_"]:has([class^="voiceChannelsIcon_"]) {
   display: none;
 }
 
@@ -264,14 +251,12 @@ div[aria-label="Help"] {
 /* top bar with topic */
 [class^=titleWrapper]>h2,
 /* top bar in thread view */
-[id^=":r"]>h1,
+[id^="_r_"]>h1,
 /* topic popup */
 [class^=resultChannel],
 [class^=channelNameContainer_],
 [class^=searchAnswer_],
 /* search */
-.channelWithIcon,
-/* channel mentions in chat */
 [class^=emptyChannelIcon_]+h3,
 /* start of new channel */
 [class^=emptyChannelIcon_]~[class*=description_],
@@ -283,8 +268,6 @@ div[aria-label="Help"] {
 /* chat input placeholder text */
 [class^=auditLog_] [class^=overflowEllipsis_] strong,
 /* audit log */
-.vc-permviewer-perms-title,
-/* permissionsviewer */
 [class^=headerChannelContainer_]>div,
 /* invite to channel dialog */
 [class^=uploadDropModal_] strong,
@@ -345,7 +328,7 @@ div[aria-label="Help"] {
 }
 
 /* why would i add you as friend if im already your friend? */
-[class*="biteSize_"] :is([aria-label="Friend"]) {
+.user-profile-popout [aria-label="Friend"] {
   display: none;
 }
 
@@ -375,7 +358,7 @@ div[aria-label="Help"] {
 
 /* squeeze channel list left */
 .wrapper__2ea32:not(.typeThread__2ea32) {
-  margin-left: 1 !important;
+  margin-left: 1px !important;
 }
 .wrapper__29444 {
   padding-left: 8px !important;
@@ -398,7 +381,7 @@ div[aria-label="Help"] {
 .modeUnreadImportant__2ea32 .icon__2ea32,
 .modeUnreadImportant__2ea32:hover .icon__2ea32,
 .modeSelected__2ea32:hover .icon__2ea32 {
-  color: var(--interactive-active);
+  color: var(--interactive-active, var(--interactive-text-active, #fff));
 }
 
 /* dim all category labels */
@@ -549,11 +532,7 @@ div[aria-label="Help"] {
 }
 
 /* Best & most reliable way (Discord updates change the class hashes often) */
-[aria-label="Invite to Voice"] {
+[aria-label="Invite to Voice"],
+#more-settings-context-invite-friends {
     display: none !important;
-}
-
-/* Gift button */
-div[class^="channelBottomBarArea"] div[class^="buttons_"] > div:not(div[class^="expression-picker-chat-input-button"]):not(div[class$="app-launcher-entrypoint"]):has(div[class^="lottieIcon_"]) {
-  display: none;
 }
