@@ -189,7 +189,7 @@ div[aria-label="Help"] {
 /* Text Bar */
 [aria-label*="Open sticker picker"],
 [aria-label*="Apps"],
-[aria-label*="Send a gift"],
+[aria-label*="Give a Gift"],
 [class*="channelAppLauncher_"] {
   display: none;
 }
